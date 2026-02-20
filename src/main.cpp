@@ -21,8 +21,14 @@ void setup() {
 
 void loop() {
     int ldrRaw = analogRead(ldrPin);
+    int lightPercent = map(ldrRaw, 0, 1023, 0, 100);
+
     Serial.print("Light Raw: ");
-    Serial.println(ldrRaw);
+    Serial.print(ldrRaw);
+    Serial.print(" | Light: ");
+    Serial.print(lightPercent);
+    Serial.println("%");
+
     delay(500);
 
 }
