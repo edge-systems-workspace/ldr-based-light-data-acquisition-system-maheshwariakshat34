@@ -20,5 +20,9 @@ void setup() {
 }
 
 void loop() {
+    int ldrRaw = analogRead(ldrPin);
+    Serial.print("Light Raw: ");
+    Serial.println(ldrRaw);
+    delay(500);
 
 }
